@@ -3,7 +3,7 @@
 @section('content')
     <h1>Berita</h1>
 
-    <article>
+    <article style="background-color: #F1F0E4; padding: 20px; border-radius: 8px;">
         @foreach ($beritas as $berita)
             <h2>{{ $berita['judul'] }}</h2>
             <h3>{{ $berita['penulis'] }}</h3>

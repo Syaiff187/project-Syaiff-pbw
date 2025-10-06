@@ -22,9 +22,9 @@ Route::get('/', function () {
 Route::get('/profile', function () {
     return view('profile', [
         "title" => "profile",
-        "nama" => "Ach Syaif", 
+        "nama" => "AHOG", 
         "nohp" => "08684637390",
-        "foto" => "img/syaif.webp",
+        "foto" => "img/Ahok.jpg",
     ]);
 });
 
@@ -41,6 +41,11 @@ Route::get('/berita', function () {
             "penulis" => "parel",
             "konten" => "Indonesia kembali mencatat sejarah penting di bidang teknologi antariksa setelah sukses meluncurkan Satelit Merah Putih 3 pada Selasa, 30 September 2025. Satelit yang diluncurkan dari Kennedy Space Center, Amerika Serikat, ini akan memperkuat jaringan komunikasi nasional sekaligus mendukung pengembangan internet di daerah terpencil. Menteri Komunikasi menyatakan bahwa satelit ini menjadi langkah strategis dalam mewujudkan pemerataan akses digital di seluruh wilayah Indonesia.",
         ],
+        [
+            "judul" => "AI Makin Canggih",
+            "penulis" => "Ahok",
+            "konten" => "Kecerdasan buatan (AI) berkembang pesat dan kini banyak diterapkan di berbagai bidang, mulai dari kesehatan, transportasi, hingga pendidikan. Meski membantu manusia, pakar mengingatkan agar AI digunakan secara bijak. Regulasi yang jelas sangat dibutuhkan untuk mencegah penyalahgunaan teknologi ini.",
+        ],
     ];
 
     return view('berita',[
@@ -52,8 +57,17 @@ Route::get('/berita', function () {
 Route::get('/kontak', function () {
     return view('kontak', [
         "title" => "kontak",
-        "gmail" => "koclokarif5@gmail.com"
+        "gmail" => "koclokarif5@gmail.com",
         
     ]);
 });
+
+Route::get('/about', function () {
+    return view('about', [
+        "title" => "about",
+        "pembuat" => "Mahasiswa Universitas Muhammadiyah Semarang",
+        
+    ]);
+});
+
 
