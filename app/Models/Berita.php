@@ -36,7 +36,7 @@ public static function ambildata()
     public static function caridata($slug)
     {
         $data_beritas = Self::$data_berita;
-   
+    
    $new_berita = [];
     foreach($data_beritas as $berita)
     {

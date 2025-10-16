@@ -1,5 +1,7 @@
 <?php
 
+use App\HTTP\controllers\MahasiswaController;
+use App\HTTP\controllers\BeritaController;
 use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 
@@ -29,24 +31,11 @@ Route::get('/profile', function () {
     ]);
 });
 
-Route::get('/berita', function () {
+Route::get('/berita', [BeritaController::class, 'index'] );
 
-    return view('berita',[
-        "title" => "Berita",
-        "beritas" => Berita::ambildata(),
-    ]);
-});
+Route::get('/berita/{slug}', [Beritacontroller::class, 'tampildata'] );
 
-Route::get('/berita/{slug}', function ($slugp) {
-
-
-
-    return view('singleberita', [
-        "title" => "Berita",
-        "new_berita" => Berita::caridata($slugp),
-        
-    ]);
-});
+Route::get('/mahasiswa', [MahasiswaController::class, 'index'] );
 
 Route::get('/kontak', function () {
     return view('kontak', [
