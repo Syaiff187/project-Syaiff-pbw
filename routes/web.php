@@ -35,7 +35,7 @@ Route::get('/berita', [BeritaController::class, 'index'] );
 
 Route::get('/berita/{slug}', [Beritacontroller::class, 'tampildata'] );
 
-Route::get('/mahasiswa', [MahasiswaController::class, 'index'] );
+Route::get('/mahasiswa', [MahasiswaController::class, 'index'] )->name('mahasiswa');
 
 Route::get('/kontak', function () {
     return view('kontak', [
