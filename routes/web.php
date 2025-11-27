@@ -1,7 +1,7 @@
 <?php
 
-use App\HTTP\controllers\MahasiswaController;
-use App\HTTP\controllers\BeritaController;
+use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\BeritaController;
 use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +42,8 @@ Route::post('/insertdata', [MahasiswaController::class, 'insertdata'] )->name('i
 
 Route::get('/tampildata/{id}', [MahasiswaController::class, 'tampildata'] )->name('tampildata');
 Route::post('/editdata/{id}', [MahasiswaController::class, 'editdata'] )->name('editdata');
+
+Route::get('/deletedata/{id}', [MahasiswaController::class, 'deletedata'] )->name('deletedata');
 
 
 Route::get('/kontak', function () {
